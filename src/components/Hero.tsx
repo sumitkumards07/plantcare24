@@ -26,13 +26,7 @@ export default function Hero() {
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  const socialIcons = [
-    { name: 'Li', label: 'LinkedIn' },
-    { name: 'X', label: 'Twitter' },
-    { name: 'Yt', label: 'YouTube' },
-    { name: 'Ig', label: 'Instagram' },
-    { name: 'Gh', label: 'GitHub' },
-  ];
+
 
   return (
     <section className="relative w-full max-w-[1440px] mx-auto px-5 sm:px-8 md:px-12 pt-8 sm:pt-12 md:pt-20 pb-12 md:pb-32 min-h-[100dvh] md:min-h-[85vh] flex flex-col">
@@ -309,40 +303,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Bottom Bar */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.5 }}
-        className="w-full flex flex-col sm:flex-row justify-between items-center gap-5 pt-10 md:pt-16 mt-auto"
-      >
-        {/* Socials */}
-        <div className="flex items-center gap-2.5">
-          {socialIcons.map(({ name, label }) => (
-            <a 
-              key={label} 
-              href={`#${label.toLowerCase()}`}
-              className="w-10 h-10 rounded-full bg-white border border-border flex items-center justify-center text-muted transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary"
-              aria-label={label}
-            >
-              <span className="text-[11px] font-bold">{name}</span>
-            </a>
-          ))}
-        </div>
 
-        {/* Links */}
-        <div className="flex items-center gap-5 sm:gap-6">
-          {['Privacy', 'Terms', 'Contact', 'FAQ'].map((link) => (
-            <a 
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              className="text-xs sm:text-sm font-medium text-muted hover:text-primary transition-colors"
-            >
-              {link}
-            </a>
-          ))}
-        </div>
-      </motion.div>
 
     </section>
   );
