@@ -2,7 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import { ArrowRight, CheckCircle2, Factory, Activity, UserCheck, Package, Globe, ExternalLink } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Factory, Activity, UserCheck, Package, Globe, ExternalLink, Wrench } from 'lucide-react';
 
 export default function Hero() {
   const { register, handleSubmit } = useForm();
@@ -268,22 +268,12 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         >
           <div className="glass-card rounded-2xl p-4 flex flex-col gap-3">
-            <div className="w-10 h-10 bg-accent-green/10 rounded-xl flex items-center justify-center">
-              <Factory className="text-accent-green w-5 h-5" />
+            <div className="w-10 h-10 bg-red-500/10 rounded-xl flex items-center justify-center">
+              <Wrench className="text-red-500 w-5 h-5" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-primary">CNC Machine</p>
-              <p className="text-xs text-accent-green font-bold mt-1">Healthy 96%</p>
-            </div>
-          </div>
-
-          <div className="glass-card rounded-2xl p-4 flex flex-col gap-3">
-            <div className="w-10 h-10 bg-accent-blue/10 rounded-xl flex items-center justify-center">
-              <Activity className="text-accent-blue w-5 h-5" />
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-primary">Emergency</p>
-              <p className="text-xs text-accent-blue font-bold mt-1">ETA 18 Min</p>
+              <p className="text-sm font-semibold text-primary">Breakdown Support</p>
+              <p className="text-xs text-red-500 font-bold mt-1">24/7 Response</p>
             </div>
           </div>
 
@@ -292,8 +282,8 @@ export default function Hero() {
               <UserCheck className="text-amber-600 w-5 h-5" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-primary">Rajesh P.</p>
-              <p className="text-xs text-amber-500 font-bold mt-1">★★★★★ 145</p>
+              <p className="text-sm font-semibold text-primary">Expert Engineer</p>
+              <p className="text-xs text-amber-500 font-bold mt-1">Verified Pros</p>
             </div>
           </div>
 
@@ -302,8 +292,18 @@ export default function Hero() {
               <CheckCircle2 className="text-accent-green w-5 h-5" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-primary">Inspection</p>
-              <p className="text-xs text-accent-green font-bold mt-1">All Clear ✓</p>
+              <p className="text-sm font-semibold text-primary">AMC Maintenance</p>
+              <p className="text-xs text-accent-green font-bold mt-1">Annual Contracts</p>
+            </div>
+          </div>
+
+          <div className="glass-card rounded-2xl p-4 flex flex-col gap-3">
+            <div className="w-10 h-10 bg-accent-blue/10 rounded-xl flex items-center justify-center">
+              <Package className="text-accent-blue w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-primary">Spare Part Supply</p>
+              <p className="text-xs text-accent-blue font-bold mt-1">Quick Delivery</p>
             </div>
           </div>
         </motion.div>
