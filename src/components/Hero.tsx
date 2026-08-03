@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { ArrowRight, CheckCircle2, Factory, Activity, UserCheck, Wrench, Package } from 'lucide-react';
 
@@ -12,7 +12,7 @@ export default function Hero() {
     // Add success logic here
   };
 
-  const staggerContainer = {
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -22,7 +22,7 @@ export default function Hero() {
     },
   };
 
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };

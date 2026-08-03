@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 export default function Timeline() {
@@ -12,7 +12,7 @@ export default function Timeline() {
     "Industrial OS"
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -22,7 +22,7 @@ export default function Timeline() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
